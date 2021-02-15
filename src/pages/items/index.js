@@ -30,7 +30,7 @@ const items = ({ items, search }) => {
 };
 
 export const getServerSideProps = async ({ query }) => {
-  const search = query.search || null;
+  const search = query.search || '';
 
   try {
     const items = await ItemService.search(search);
