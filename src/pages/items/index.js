@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import useTranslation from 'next-translate/useTranslation';
 
 import ItemList from '@/components/Item/ItemList/ItemList';
 import ItemService from '@/services/ItemService';
@@ -8,6 +9,7 @@ import NotFoundError from '@/components/Error/NotFoundError/NotFoundError';
 import * as ErrorType from '@/components/Error/constants/ErrorType';
 
 const items = ({ items, search }) => {
+  const { t } = useTranslation()
 
   const hasResults = () => {
     return !!search && Array.isArray(items) && items.length > 0;
@@ -16,7 +18,7 @@ const items = ({ items, search }) => {
   return (
     <>
       <Head>
-        <title>{search} | Mercado Libre</title>
+        <title>{search} | {t('common:company-name')}</title>
       </Head>
       {
         hasResults() ?

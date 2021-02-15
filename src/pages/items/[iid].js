@@ -10,7 +10,7 @@ const item = ({ item }) => (
   <>
     <Head>
       <title>{item.title}</title>
-      <meta name="description" content={item.plain_text} />
+      <meta name="description" content={item.description} />
     </Head>
     <ItemDescription item={item} />
   </>
