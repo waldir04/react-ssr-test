@@ -1,11 +1,16 @@
+import useTranslation from 'next-translate/useTranslation';
 import React from 'react';
 
 import classes from './Logo.module.scss';
 
-const logo = () => (
-  <div className={classes.Logo}>
-    <img src="/assets/img/logo.png" alt="Mercado Libre" />
-  </div>
-);
+const logo = () => {
+  const { t } = useTranslation();
+  
+  return (
+    <div className={classes.Logo}>
+      <img src="/assets/img/logo.png" alt={t('common:company-name')} />
+    </div>
+  );
+};
 
 export default logo;

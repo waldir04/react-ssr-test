@@ -1,9 +1,11 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import useTranslation from 'next-translate/useTranslation';
 
 import Button from '@/components/UI/Button/Button';
 
 const unknownError = () => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const handleTryAgain = () => {
@@ -12,10 +14,10 @@ const unknownError = () => {
 
   return (
     <div className="message-container align-center">
-      <h1>Algo salió mal!</h1>
+      <h1>{t('error:something-went-wrong')}</h1>
       <div className="mt6">
         <Button btnType="Primary" clicked={handleTryAgain}>
-          Volvel a intentarlo
+          {t('common:try-again')}
         </Button>
       </div>
     </div>
