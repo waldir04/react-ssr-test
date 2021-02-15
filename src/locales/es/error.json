@@ -1,0 +1,5 @@
+{
+  "search-item-not-found": "No encontramos productos con la palabra \"{{search}}\".",
+  "item-not-found": "El producto no existe.",
+  "not-found": "El recurso solicitado no existe."
+}

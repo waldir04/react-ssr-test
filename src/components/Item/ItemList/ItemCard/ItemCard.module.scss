@@ -1,0 +1,11 @@
+@import '@/styles/utilities/colors';
+
+.ProductCard {
+  background-color: $white;
+  display: flex;
+
+  .ProductCardImage {
+    height: 160px;
+    width: 160px;
+  }
+}

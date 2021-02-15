@@ -1,0 +1,29 @@
+$sizes: 8;
+
+@for $i from 1 through $sizes {
+  $padding: $i * 0.4rem;
+
+  .p#{$i} {
+    padding: $padding;
+  }
+  .pl#{$i} {
+    padding-left: $padding;
+  }
+  .pr#{$i} {
+    padding-right: $padding;
+  }
+  .pt#{$i} {
+    padding-top: $padding;
+  }
+  .pb#{$i} {
+    padding-bottom: $padding;
+  }
+  .px#{$i} {
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+  .py#{$i} {
+    padding-top: $padding;
+    padding-bottom: $padding;
+  }
+}

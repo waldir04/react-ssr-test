@@ -1,0 +1,38 @@
+@import '@/styles/utilities/mixins';
+@import '@/styles/utilities/colors';
+
+.Container {
+  background-color: $white;
+  display: flex;
+  flex-flow: column;
+  flex-direction: column-reverse;
+
+  @include media-breakpoint(md) {
+    flex-flow: row;
+  }
+}
+
+.InfoContainer {
+  flex: 1 1 70%;
+}
+
+.ActionContainer {
+  flex: 1 1 30%;
+}
+
+.ProductImage {
+  margin: 0 auto;
+  width: 100%;
+
+  @include media-breakpoint(md) {
+    width: 80%;
+  }
+
+  @include media-breakpoint(lg) {
+    width: 70%;
+  }
+
+  @include media-breakpoint(xl) {
+    width: 60%;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "react-ssr-test",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "next": "10.0.6",
+    "next-translate": "^1.0.2",
+    "prop-types": "^15.7.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-number-format": "^4.4.4",
+    "sass": "^1.32.7"
+  }
+}

@@ -1,0 +1,29 @@
+$sizes: 8;
+
+@for $i from 1 through $sizes {
+  $margin: $i * 0.4rem;
+
+  .m#{$i} {
+    margin: $margin;
+  }
+  .ml#{$i} {
+    margin-left: $margin;
+  }
+  .mr#{$i} {
+    margin-right: $margin;
+  }
+  .mt#{$i} {
+    margin-top: $margin;
+  }
+  .mb#{$i} {
+    margin-bottom: $margin;
+  }
+  .mx#{$i} {
+    margin-left: $margin;
+    margin-right: $margin;
+  }
+  .my#{$i} {
+    margin-top: $margin;
+    margin-bottom: $margin;
+  }
+}

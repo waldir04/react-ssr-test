@@ -1,0 +1,23 @@
+@import '@/styles/utilities/colors';
+
+.Header {
+  background-color: $brand;
+  display: flex;
+  height: 52px;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+
+  .LogoContainer {
+    height: 50%;
+  }
+
+  .Nav {
+    align-items: center;
+    display: flex;
+  }
+
+  .Search {
+    flex-grow: 1;
+  }
+}

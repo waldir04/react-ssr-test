@@ -1,0 +1,63 @@
+@import './../utilities/colors';
+@import './../utilities/mixins';
+@import './../utilities/vars';
+
+html,
+body {
+  background-color: $background-gray;
+  font-family: $font-family;
+  font-size: $font-size;
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+p {
+  word-break: break-word;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+
+  @include media-breakpoint(sm) {
+    width: 80%;
+  }
+
+  @include media-breakpoint(md) {
+    width: 70%;
+  }
+
+  @include media-breakpoint(lg) {
+    width: 60%;
+  }
+
+  @include media-breakpoint(xl) {
+    width: 50%;
+  }
+}
+
+.d-block {
+  display: block;
+}
+
+.message-container {
+  @include media-breakpoint(sm) {
+    margin: 3rem auto;
+    width: 50%;
+  }
+}

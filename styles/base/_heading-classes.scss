@@ -1,0 +1,12 @@
+$sizes: 2em, 1.5em, 1.3em, 1em, 0.8em, 0.7em;
+
+@for $i from 1 through length($sizes) {
+  $size: nth($sizes, $i);
+
+  h#{$i} {
+    font-size: $size;
+  }
+  .h#{$i} {
+    font-size: $size;
+  }
+}

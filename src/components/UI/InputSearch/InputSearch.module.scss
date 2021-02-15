@@ -1,0 +1,21 @@
+.InputSearch {
+  padding-right: 30px;
+  position: relative;
+
+  button {
+    background-color: #ededed;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 30px;
+
+    img {
+      height: 70%;
+      vertical-align: middle;
+    }
+  }
+
+  input {
+    width: 100%;
+  }
+}

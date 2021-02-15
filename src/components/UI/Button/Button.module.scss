@@ -1,0 +1,17 @@
+@import '@/styles/utilities/colors';
+
+.Button {
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 10px 24px;
+  width: 100%;
+}
+
+.Primary {
+  background-color: $blue;
+  color: $white;
+
+    &:hover {
+    background-color: $blue-dark;
+  }
+}
