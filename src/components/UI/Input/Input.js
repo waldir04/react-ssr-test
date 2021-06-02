@@ -5,8 +5,10 @@ const input = ({ changed, type, value }) => {
   const [inputValue, setInputValue] = useState('');
 
   useEffect(() => {
-     setInputValue(value);
-  }, [value]);
+    if (typeof value !== 'undefined') {
+      setInputValue(value);
+    }
+  }, []);
 
   const handleChange = (event) => {
     const value = event.target.value;
@@ -31,6 +33,10 @@ input.propTypes = {
   changed: PropTypes.func,
   type: PropTypes.string,
   value: PropTypes.string
+};
+
+input.defaultProps = {
+  type: 'text'
 };
 
 export default input;

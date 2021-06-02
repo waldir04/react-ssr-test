@@ -1,5 +1,7 @@
 import axios from '@/config/axios-api';
 
+import addSignatureResponse from './../helpers/add-signature';
+
 const getItemHandler = (req, res) => {
   const { iid } = req.query;
 
@@ -9,7 +11,8 @@ const getItemHandler = (req, res) => {
   ])
     .then(
       (responses) => {
-        res.json(mapItem(responses));
+        const response = mapResponse(mapItem(responses));
+        res.json(response);
       },
       (error) => {
         const status = error.status;
@@ -34,6 +37,10 @@ const mapItem = (responses) => {
       decimals: 2
     },
   };
+};
+
+const mapResponse = (item) => {
+  return addSignatureResponse({ item });
 };
 
 export default getItemHandler;

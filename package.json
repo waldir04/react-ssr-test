@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next dev"
+    "start": "next dev",
+    "test": "react-scripts test",
+    "coverage": "npm run test -- --coverage --watchAll=false"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -16,5 +18,30 @@
     "react-dom": "17.0.1",
     "react-number-format": "^4.4.4",
     "sass": "^1.32.7"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^13.1.9",
+    "next-page-tester": "^0.25.0",
+    "react-scripts": "^4.0.3"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@/hoc/(.*)$": "<rootDir>/src/hoc/$1",
+      "^@/components/(.*)$": "<rootDir>/src/components/$1",
+      "^@/styles/(.*)$": "<rootDir>/styles/$1",
+      "^@/services/(.*)$": "<rootDir>/src/services/$1",
+      "^@/config/(.*)$": "<rootDir>/src/config/$1",
+      "^@/constants/(.*)$": "<rootDir>/src/constants/$1"
+    },
+    "collectCoverageFrom": [
+      "**/*.{js, jxs}",
+      "!**/node_modules/**",
+      "!**/public/**",
+      "!**/src/pages/api/**",
+      "!**/*.config.js",
+      "!**/i18n.js"
+    ]
   }
 }

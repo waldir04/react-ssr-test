@@ -9,8 +9,10 @@ const inputSearch = ({ search, changed }) => {
   const [query, setQuery] = useState(search);
 
   useEffect(() => {
-    setQuery(search);
-  }, [search])
+    if (typeof search !== 'undefined') {
+      setQuery(search);
+    }
+  }, [])
 
   const handleChange = (value) => {
     setQuery(value);
@@ -25,7 +27,7 @@ const inputSearch = ({ search, changed }) => {
   };
 
   const isNewSearch = () => {
-    return !!query && query !== search
+    return !!query && query !== search;
   };
 
   return (

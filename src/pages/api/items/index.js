@@ -1,12 +1,16 @@
 import axios from '@/config/axios-api';
 
+import addSignatureResponse from './../helpers/add-signature';
+
 const searchItemHandler = (req, res) => {
   let { q, limit } = req.query;
   limit = limit || 4;
 
   return axios.get('/sites/MLA/search', { params: { q, limit } })
   .then(
-    (response) => res.json(mapItems(response)),
+    (response) => { 
+      res.json(mapResponse(mapItems(response)));
+    },
     (error) => {
       const status = error.status;
       res.status(status).json(error.data);
@@ -28,6 +32,10 @@ const mapItems = (response) => {
       }
     }
   });
+};
+
+const mapResponse = (items) => {
+  return addSignatureResponse({ items })
 };
 
 export default searchItemHandler;
